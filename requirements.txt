@@ -3,3 +3,4 @@ werkzeug
 psycopg2
 pdf2image
 google-generativeai
+fastapi
