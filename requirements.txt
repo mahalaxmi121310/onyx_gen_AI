@@ -1,0 +1,7 @@
+Flask
+werkzeug
+psycopg2
+pdf2image
+google-generativeai
+KYC_doc
+api_maneger
