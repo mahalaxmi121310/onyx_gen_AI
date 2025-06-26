@@ -89,7 +89,5 @@ async def process_drawing(file: UploadFile = File(...)):
 def root():
     return {"message": "API is up. Use POST /process-drawing/ with PDF or image file."}
 
-# ----------------- Run with python -----------------
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run("Rest_API_Drowing:app", host="127.0.0.1", port=8000, reload=True)
+if __name__ == "__main__": 
+    uvicorn.run("your_module:app", host="0.0.0.0", port=8000, reload=False)
