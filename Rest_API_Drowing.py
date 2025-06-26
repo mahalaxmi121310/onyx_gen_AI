@@ -90,4 +90,5 @@ def root():
     return {"message": "API is up. Use POST /process-drawing/ with PDF or image file."}
 
 if __name__ == "__main__": 
-    uvicorn.run("your_module:app", host="0.0.0.0", port=8000, reload=False)
+    uvicorn.run("Rest_API_Drowing:app", host="0.0.0.0", port=8000, reload=False)
+
