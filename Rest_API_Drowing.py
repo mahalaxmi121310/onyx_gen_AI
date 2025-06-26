@@ -5,6 +5,7 @@ import shutil
 import os
 import json
 import time
+import uvicorn
 from PIL import Image
 from pdf2image import convert_from_path
 import google.generativeai as genai
