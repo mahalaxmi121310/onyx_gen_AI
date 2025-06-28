@@ -78,6 +78,7 @@ async def process_drawing(file: UploadFile = File(...)):
             structured_data = classify_image_with_gemini(image_path)
 
             if structured_data:
+                structured_data["file_name"] = file.filename 
                 return JSONResponse(content=structured_data)
             else:
                 return JSONResponse(status_code=500, content={"error": "Gemini failed to return valid JSON."})
