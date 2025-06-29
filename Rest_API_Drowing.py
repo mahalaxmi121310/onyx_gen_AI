@@ -10,12 +10,23 @@ from PIL import Image
 from pdf2image import convert_from_path
 import google.generativeai as genai
 from api_maneger import Drowing_Prompts  # Your prompt module
+from fastapi.middleware.cors import CORSMiddleware
+
 
 # ----------------- Configuration -----------------
 genai.configure(api_key="AIzaSyAZuAsU0IfNMNdTNy3tWnb9TC_7f-MfBQk")
 PROMPT = Drowing_Prompts
 
+
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"], 
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # ----------------- JSON Fixer -----------------
 def fix_incomplete_json(json_string):
